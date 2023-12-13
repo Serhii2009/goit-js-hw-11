@@ -16,8 +16,6 @@ loadMoreButton.addEventListener('click', onLoadMore);
 
 loadMoreButton.classList.add('is-hidden');
 
-//************Function onSearch****************/////
-
 async function onSearch(event) {
   event.preventDefault();
   clearGallery();
@@ -60,7 +58,6 @@ async function onSearch(event) {
   }
 }
 
-//************Function onLoadMore****************/////
 
 async function onLoadMore() {
   const imgResponse = await imageApi.fetchImages();
@@ -75,7 +72,6 @@ async function onLoadMore() {
   autoScroll();
 }
 
-//************Function createImageCard****************/////
 
 function createImageCard(imageCard) {
   const markupList = imageCard
@@ -116,13 +112,9 @@ function createImageCard(imageCard) {
   const lightbox = new SimpleLightbox('.gallery a');
 }
 
-//************Function clearGallery****************/////
-
 function clearGallery() {
   gallery.innerHTML = '';
 }
-
-//************Function autoScroll****************/////
 
 function autoScroll() {
   const { height: cardHeight } = document
