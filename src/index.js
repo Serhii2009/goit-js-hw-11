@@ -58,7 +58,6 @@ async function onSearch(event) {
   }
 }
 
-
 async function onLoadMore() {
   const imgResponse = await imageApi.fetchImages();
   if (imageApi.viewedHits === imageApi.totalHits) {
@@ -71,7 +70,6 @@ async function onLoadMore() {
 
   autoScroll();
 }
-
 
 function createImageCard(imageCard) {
   const markupList = imageCard
